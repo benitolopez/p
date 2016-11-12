@@ -1,8 +1,8 @@
 # P
 
-**P** is a minimal project automator. It was inspired by [prm](https://github.com/eivind88/prm), an awesome project of Eivind Arvesen. While I'm still thinking that *prm* is very good, I was looking for something more simple. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor. 
+**P** is a minimal project automator for Bash. It was inspired by [prm](https://github.com/eivind88/prm), an awesome project of Eivind Arvesen. While I'm still thinking that *prm* is very good, I was looking for a project manager with a different logic and more simple. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor.
 
-*prm* works in a different way. That's why I have created **P**.
+That's why I have created **P**.
 
 ## How it works
 
@@ -63,7 +63,7 @@ You can run multiple projects at once with:
 p <project1 name> <project2 name> <project3 name>
 ```
 
-To open a project with your default editor run (multiple projects allowed):
+But sometimes you only need a quick way to open a project with your default editor. In this case, just run (multiple projects allowed):
 
 ```bash
 p o <project name>
