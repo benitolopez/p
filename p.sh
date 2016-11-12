@@ -84,7 +84,7 @@ function open_with_editor() {
 }
 
 function _p() {
-    VERSION=1.0.0
+    VERSION=1.0.1
 
     # Set projects dir (can be changed with the environment variable $_P_DIR)
     p_dir="${_P_DIR:-$HOME/.projects}"
@@ -228,7 +228,7 @@ function _p() {
             else
                 for argument in "${@:1}"; do
                     if [ -f "$p_dir/$argument.sh" ]; then
-                        sh $p_dir/$argument.sh
+                        . $p_dir/$argument.sh
                     else
                         print_error 1 "Project $argument does not exist"
                     fi
