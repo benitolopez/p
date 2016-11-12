@@ -26,7 +26,7 @@ Clone this repository:
 git clone https://github.com/benitolopez/p.git
 ```
 
-Then add something like this in your .bashrc:
+Then add something like this in your `.bashrc`:
 
 ```bash
 . /path/to/p.sh
