@@ -1,12 +1,12 @@
 # P
 
-P is a minimal project automator. It was inspired by prm, an awesome project of Eivind Arvesen. While I'm still thinking that prm is very good, I was looking for something more simple and that uses a different approach. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor. 
+**P** is a minimal project automator. It was inspired by [prm](https://github.com/eivind88/prm), an awesome project of Eivind Arvesen. While I'm still thinking that *prm* is very good, I was looking for something more simple. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor. 
 
-That's why I have created P.
+*prm* works in a different way. That's why I have created **P**.
 
 ## How it works
 
-When you run P, you run the script associated to your project. You can open a new shell window, start a task runner or run a command. It's up to you. P creates this script with only one variable, `PROJECT_PATH`, the path of your project.
+When you run **P**, you run the script associated to your project. You can open a new shell window, start a task runner or run a command. It's up to you. **P** creates this script with only one variable, `PROJECT_PATH`, the path of your project.
 
 Example:
 
