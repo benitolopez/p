@@ -232,14 +232,12 @@ function _p() {
 		g)
             # Go to the project directory
             if [ "$2" ]; then
-                for argument in "${@:2}"; do
-                    if [ -f "$p_dir/$argument.sh" ]; then
-						go_to_project $argument
-                    else
-                        print_error 1 "Project $argument does not exist"
-                        return 1
-                    fi
-                done
+				if [ -f "$p_dir/$2.sh" ]; then
+					go_to_project $2
+				else
+					print_error 1 "Project $2 does not exist"
+					return 1
+				fi
             else
                 print_error 1 "No project name given"
                 return 1
