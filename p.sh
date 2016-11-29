@@ -17,8 +17,8 @@
 #         used to open the project with your default editor
 #             - default '$EDITOR .'
 #         set $_P_GO_FUNC in .bashrc to change the function
-#         used to open a new shell window in the project directory
-#             - default 'gnome-terminal --working-directory=/path/to/project/'
+#         used to go to the project directory
+#             - default 'cd /path/to/project/'
 
 # Print error message and return error code
 function print_error() {
@@ -42,7 +42,7 @@ function print_help() {
     echo "  list                     List all projects."
     echo "  delete <project name>    Delete project(s)."
     echo "  o <project name>         Open project(s) with the default editor."
-    echo "  g <project name>         Open new shell window in the project(s) directory."
+    echo "  g <project name>         Go to the project(s) directory."
     echo "  edit <project name>      Edit project(s)."
     echo "  rename <old> <new>       Rename project."
     echo "  -h --help                Display this information."
@@ -87,13 +87,13 @@ function open_with_editor() {
     fi
 }
 
-# Open new shell window in the project directory
+# Go to the project directory
 function go_to_project() {
     path=$(sed -n "/^PROJECT_PATH=\(.*\)$/s//\1/p" $p_dir/$1.sh)
 
     if [ -d "$path" ]; then
-        # Open the folder - You can override this function with $_P_GO_FUNC
-        ${_P_GO_FUNC:-gnome-terminal --working-directory=$path}
+        # Go to the project directory - You can override this function with $_P_GO_FUNC
+        ${_P_GO_FUNC:-cd $path}
     else
         print_error 1 "Directory does not exist"
         return 1
@@ -101,7 +101,7 @@ function go_to_project() {
 }
 
 function _p() {
-    VERSION=1.1.0
+    VERSION=2.0.0
 
     # Set projects dir (can be changed with the environment variable $_P_DIR)
     p_dir="${_P_DIR:-$HOME/.projects}"
@@ -230,7 +230,7 @@ function _p() {
             fi
             ;;
 		g)
-            # Open new shell window in the project directory
+            # Go to the project directory
             if [ "$2" ]; then
                 for argument in "${@:2}"; do
                     if [ -f "$p_dir/$argument.sh" ]; then

@@ -49,7 +49,7 @@ Usage: p <option>
     list                     List all projects.
     delete <project name>    Delete project(s).
     o <project name>         Open project(s) with the default editor.
-	g <project name>         Open new shell window in the project(s) directory.
+	g <project name>         Go to the project(s) directory.
     edit <project name>      Edit project(s).
 	rename <old> <new>       Rename project.
     -h --help                Display this information.
@@ -70,7 +70,7 @@ But sometimes you only need a quick way to open a project with your default edit
 p o <project name>
 ```
 
-And to open a new shell window in the project directory run (multiple projects allowed):
+And to go the project directory run (multiple projects allowed):
 
 ```bash
 p g <project name>
@@ -86,8 +86,8 @@ _P_DIR           # projects directory where the scripts are saved
                    default '~/.projects'
 _P_OPEN_FUNC     # function used to open the project with 
                    your default editor, default '$EDITOR .'
-_P_GO_FUNC       # function used to open a new shell window in the project directory
-                   default 'gnome-terminal --working-directory=/path/to/project/'
+_P_GO_FUNC       # function used to go to the project directory
+                   default 'cd /path/to/project/'
 ```
 
 ## License
