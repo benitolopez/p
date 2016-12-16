@@ -16,9 +16,6 @@
 #         set $_P_OPEN_FUNC in .bashrc to change the function
 #         used to open the project with your default editor
 #             - default '$EDITOR .'
-#         set $_P_GO_FUNC in .bashrc to change the function
-#         used to go to the project directory
-#             - default 'cd /path/to/project/'
 
 # Print error message and return error code
 function print_error() {
@@ -92,8 +89,8 @@ function go_to_project() {
     path=$(sed -n "/^PROJECT_PATH=\(.*\)$/s//\1/p" $p_dir/$1.sh)
 
     if [ -d "$path" ]; then
-        # Go to the project directory - You can override this function with $_P_GO_FUNC
-        ${_P_GO_FUNC:-cd $path}
+        # Go to the project directory
+        cd $path
     else
         print_error 1 "Directory does not exist"
         return 1

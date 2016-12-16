@@ -86,8 +86,6 @@ _P_DIR           # projects directory where the scripts are saved
                    default '~/.projects'
 _P_OPEN_FUNC     # function used to open the project with 
                    your default editor, default '$EDITOR .'
-_P_GO_FUNC       # function used to go to the project directory
-                   default 'cd /path/to/project/'
 ```
 
 ## License
