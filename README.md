@@ -1,6 +1,6 @@
 # P
 
-**P** is a minimal project automator for Bash. It was inspired by [prm](https://github.com/eivind88/prm), an awesome project of Eivind Arvesen. While I'm still thinking that *prm* is very good, I was looking for a project manager with a different logic and more simple. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor.
+**P** is a minimal project automator for Bash and Zsh. It was inspired by [prm](https://github.com/eivind88/prm), an awesome project of Eivind Arvesen. While I'm still thinking that *prm* is very good, I was looking for a project manager with a different logic and more simple. During the day, I switch between projects constantly, losing a lot of time. Sometimes I need to start some common tasks (launch Vim, start Gulp and so on), but often I only need to open the project with my editor.
 
 That's why I have created **P**.
 
